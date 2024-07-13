@@ -1,13 +1,5 @@
-import mongoose, { Document, Schema } from "mongoose";
-
-export interface ITask extends Document {
-  title: string;
-  description: string;
-  status: string;
-  assignedTo: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import mongoose, { Schema } from "mongoose";
+import { ITask } from "../types";
 
 const TaskSchema: Schema = new Schema(
   {

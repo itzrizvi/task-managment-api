@@ -1,4 +1,4 @@
-import { Document } from "mongoose";
+import { Document, Types } from "mongoose";
 
 export interface IUser extends Document {
   name: string;
@@ -6,4 +6,9 @@ export interface IUser extends Document {
   password: string;
   refreshToken: string;
   matchPassword: (enteredPassword: string) => Promise<boolean>;
+}
+
+// New interface for user data retrieved from the database
+export interface IUserResponse extends IUser {
+  _id: Types.ObjectId;
 }

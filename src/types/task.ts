@@ -1,4 +1,4 @@
-import { Document } from "mongoose";
+import { Document, Types } from "mongoose";
 
 export interface ITask extends Document {
   title: string;
@@ -7,4 +7,9 @@ export interface ITask extends Document {
   assignedTo: string;
   createdAt: Date;
   updatedAt: Date;
+}
+
+// New interface for user data retrieved from the database
+export interface ITaskResponse extends ITask {
+  _id: Types.ObjectId;
 }

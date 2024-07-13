@@ -1,4 +1,4 @@
 import { ITask } from "./task";
-import { IUser } from "./user";
+import { IUser, IUserResponse } from "./user";
 
-export { ITask, IUser };
+export { ITask, IUser, IUserResponse };

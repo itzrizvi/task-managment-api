@@ -9,6 +9,9 @@ export interface IUser extends Document {
 }
 
 // New interface for user data retrieved from the database
-export interface IUserResponse extends IUser {
+export interface IUserResponse extends Document {
   _id: Types.ObjectId;
+  name: string;
+  email: string;
+  refreshToken: string;
 }
